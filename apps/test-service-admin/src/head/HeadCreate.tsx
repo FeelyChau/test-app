@@ -3,6 +3,7 @@ import {
   Create,
   SimpleForm,
   CreateProps,
+  TextInput,
   ReferenceInput,
   SelectInput,
 } from "react-admin";
@@ -12,7 +13,8 @@ export const HeadCreate = (props: CreateProps): React.ReactElement => {
   return (
     <Create {...props}>
       <SimpleForm>
-        <ReferenceInput source="user.id" reference="User" label="user">
+        <TextInput label="test" source="test" />
+        <ReferenceInput source="users.id" reference="User" label="users">
           <SelectInput optionText={UserTitle} />
         </ReferenceInput>
       </SimpleForm>

@@ -51,18 +51,19 @@ export class HeadControllerBase {
       data: {
         ...data,
 
-        user: data.user
+        users: data.users
           ? {
-              connect: data.user,
+              connect: data.users,
             }
           : undefined,
       },
       select: {
         createdAt: true,
         id: true,
+        test: true,
         updatedAt: true,
 
-        user: {
+        users: {
           select: {
             id: true,
           },
@@ -90,9 +91,10 @@ export class HeadControllerBase {
       select: {
         createdAt: true,
         id: true,
+        test: true,
         updatedAt: true,
 
-        user: {
+        users: {
           select: {
             id: true,
           },
@@ -121,9 +123,10 @@ export class HeadControllerBase {
       select: {
         createdAt: true,
         id: true,
+        test: true,
         updatedAt: true,
 
-        user: {
+        users: {
           select: {
             id: true,
           },
@@ -160,18 +163,19 @@ export class HeadControllerBase {
         data: {
           ...data,
 
-          user: data.user
+          users: data.users
             ? {
-                connect: data.user,
+                connect: data.users,
               }
             : undefined,
         },
         select: {
           createdAt: true,
           id: true,
+          test: true,
           updatedAt: true,
 
-          user: {
+          users: {
             select: {
               id: true,
             },
@@ -208,9 +212,10 @@ export class HeadControllerBase {
         select: {
           createdAt: true,
           id: true,
+          test: true,
           updatedAt: true,
 
-          user: {
+          users: {
             select: {
               id: true,
             },

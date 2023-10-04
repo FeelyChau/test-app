@@ -50,6 +50,17 @@ class HeadOrderByInput {
   @Field(() => SortOrder, {
     nullable: true,
   })
+  test?: SortOrder;
+
+  @ApiProperty({
+    required: false,
+    enum: ["asc", "desc"],
+  })
+  @IsOptional()
+  @IsEnum(SortOrder)
+  @Field(() => SortOrder, {
+    nullable: true,
+  })
   updatedAt?: SortOrder;
 
   @ApiProperty({
@@ -61,7 +72,7 @@ class HeadOrderByInput {
   @Field(() => SortOrder, {
     nullable: true,
   })
-  userId?: SortOrder;
+  usersId?: SortOrder;
 }
 
 export { HeadOrderByInput as HeadOrderByInput };

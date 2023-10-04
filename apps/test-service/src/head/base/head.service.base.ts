@@ -47,11 +47,11 @@ export class HeadServiceBase {
     return this.prisma.head.delete(args);
   }
 
-  async getUser(parentId: string): Promise<User | null> {
+  async getUsers(parentId: string): Promise<User | null> {
     return this.prisma.head
       .findUnique({
         where: { id: parentId },
       })
-      .user();
+      .users();
   }
 }

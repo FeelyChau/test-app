@@ -35,6 +35,14 @@ class Head {
 
   @ApiProperty({
     required: true,
+    type: String,
+  })
+  @IsString()
+  @Field(() => String)
+  test!: string;
+
+  @ApiProperty({
+    required: true,
   })
   @IsDate()
   @Type(() => Date)
@@ -48,7 +56,7 @@ class Head {
   @ValidateNested()
   @Type(() => User)
   @IsOptional()
-  user?: User | null;
+  users?: User | null;
 }
 
 export { Head as Head };

@@ -31,6 +31,17 @@ class HeadWhereInput {
 
   @ApiProperty({
     required: false,
+    type: StringFilter,
+  })
+  @Type(() => StringFilter)
+  @IsOptional()
+  @Field(() => StringFilter, {
+    nullable: true,
+  })
+  test?: StringFilter;
+
+  @ApiProperty({
+    required: false,
     type: () => UserWhereUniqueInput,
   })
   @ValidateNested()
@@ -39,7 +50,7 @@ class HeadWhereInput {
   @Field(() => UserWhereUniqueInput, {
     nullable: true,
   })
-  user?: UserWhereUniqueInput;
+  users?: UserWhereUniqueInput;
 }
 
 export { HeadWhereInput as HeadWhereInput };

@@ -13,6 +13,10 @@ import { HeadList } from "./head/HeadList";
 import { HeadCreate } from "./head/HeadCreate";
 import { HeadEdit } from "./head/HeadEdit";
 import { HeadShow } from "./head/HeadShow";
+import { OrderList } from "./order/OrderList";
+import { OrderCreate } from "./order/OrderCreate";
+import { OrderEdit } from "./order/OrderEdit";
+import { OrderShow } from "./order/OrderShow";
 import { jwtAuthProvider } from "./auth-provider/ra-auth-jwt";
 
 const App = (): React.ReactElement => {
@@ -52,6 +56,13 @@ const App = (): React.ReactElement => {
           edit={HeadEdit}
           create={HeadCreate}
           show={HeadShow}
+        />
+        <Resource
+          name="Order"
+          list={OrderList}
+          edit={OrderEdit}
+          create={OrderCreate}
+          show={OrderShow}
         />
       </Admin>
     </div>

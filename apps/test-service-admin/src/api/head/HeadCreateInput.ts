@@ -1,5 +1,6 @@
 import { UserWhereUniqueInput } from "../user/UserWhereUniqueInput";
 
 export type HeadCreateInput = {
-  user?: UserWhereUniqueInput | null;
+  test: string;
+  users?: UserWhereUniqueInput | null;
 };

@@ -3,5 +3,6 @@ import { UserWhereUniqueInput } from "../user/UserWhereUniqueInput";
 
 export type HeadWhereInput = {
   id?: StringFilter;
-  user?: UserWhereUniqueInput;
+  test?: StringFilter;
+  users?: UserWhereUniqueInput;
 };

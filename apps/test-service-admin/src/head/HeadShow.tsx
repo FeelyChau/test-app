@@ -15,8 +15,9 @@ export const HeadShow = (props: ShowProps): React.ReactElement => {
       <SimpleShowLayout>
         <DateField source="createdAt" label="Created At" />
         <TextField label="ID" source="id" />
+        <TextField label="test" source="test" />
         <DateField source="updatedAt" label="Updated At" />
-        <ReferenceField label="user" source="user.id" reference="User">
+        <ReferenceField label="users" source="user.id" reference="User">
           <TextField source={USER_TITLE_FIELD} />
         </ReferenceField>
       </SimpleShowLayout>

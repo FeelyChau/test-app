@@ -222,9 +222,10 @@ export class UserControllerBase {
       select: {
         createdAt: true,
         id: true,
+        test: true,
         updatedAt: true,
 
-        user: {
+        users: {
           select: {
             id: true,
           },

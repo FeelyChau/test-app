@@ -90,9 +90,9 @@ export class HeadResolverBase {
       data: {
         ...args.data,
 
-        user: args.data.user
+        users: args.data.users
           ? {
-              connect: args.data.user,
+              connect: args.data.users,
             }
           : undefined,
       },
@@ -113,9 +113,9 @@ export class HeadResolverBase {
         data: {
           ...args.data,
 
-          user: args.data.user
+          users: args.data.users
             ? {
-                connect: args.data.user,
+                connect: args.data.users,
               }
             : undefined,
         },
@@ -152,15 +152,17 @@ export class HeadResolverBase {
   @common.UseInterceptors(AclFilterResponseInterceptor)
   @graphql.ResolveField(() => User, {
     nullable: true,
-    name: "user",
+    name: "users",
   })
   @nestAccessControl.UseRoles({
     resource: "User",
     action: "read",
     possession: "any",
   })
-  async resolveFieldUser(@graphql.Parent() parent: Head): Promise<User | null> {
-    const result = await this.service.getUser(parent.id);
+  async resolveFieldUsers(
+    @graphql.Parent() parent: Head
+  ): Promise<User | null> {
+    const result = await this.service.getUsers(parent.id);
 
     if (!result) {
       return null;
